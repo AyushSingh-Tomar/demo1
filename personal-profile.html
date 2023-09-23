@@ -1,66 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayush-Magazine</title>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Your-Profile</title>
+    
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
 <body>
-
-
-
-    <!--------------------------------head bar---------------------------------->
-    <nav>
-        <div class="main-nav container flex">
-            <a href="#" class="Portal-logo" onClick="reload()">
-                <img src="https://i.ibb.co/FKMZgXk/Ayush-Magazine.png" alt="Ayush-Magazine">
-            </a>
-            <div class="nav-links">
-                <ul class="flex">
-                    <li class="hover-link nav-item" id="Start-ups" onclick="onNavItemClick('Start-ups')">Start-ups</li>
-                    <li class="hover-link nav-item" id="Market" onclick="onNavItemClick('Market')">Market</li>
-                    <li class="hover-link nav-item" id="Govt" onclick="onNavItemClick('Govt')">Govt</li>
-                    <li class="hover-link nav-item" id="Schemes" onclick="onNavItemClick('Schemes')">Schemes</li>
-                </ul>
-                <!-- on the place of id in function , we can pass a json object as well -->
-            </div>
-            <div class="search-bar flex">
-                <input type="text" class="news-input" placeholder="Search" id="search-text">
-                <button id="search-button" class="search-button">Search</button>
-            </div>
-
+    <header>
+      <div class="header-background-profile">
+        <div class="student-mentor-image">
+          <a href="https://imgbb.com/"><img src="https://i.ibb.co/R6TbJM9/image-holder-for-website.png" alt="image-holder-for-website" class="img-responsive img-circle"></a>
         </div>
-    </nav>
-    <!--Main content showing section-->
+         
+      </div>
+    
+    </header>
+
     <main>
-        <div class="cards-container container flex" id="cards-container">
-        
-
-        </div>
-    </main>
-    <template id="template-news-card">
-        <div class="card">
-            <div class="card-header">
-                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
-            </div>
-            <div class="card-content">
-                <h3 id="news-title">Title</h3>
-                <h6 class="news-source" id="news-source">this is subtitle date 23/23/23</h6>
-                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
-                    tempore sapiente labore autem voluptatem laborum odio ducimus, nostrum cupiditate nemo culpa est
-                    iure nam saepe quia quod accusantium quibusdam soluta.</p>
-            </div>
-        </div>
-    </template> <!--make it anywhere doesnt matter-->
-
-    <!-------------------------------sidebar------------------------------------>
+      <div class="profile-details container-fluid ">
+        <div class="well-sm user-info user-name">
+         <div class="tag-of-info">Name</div>
+        <div class="response-of-user">Divy-dada</div>  </div>
+        <div class="well-sm user-info date-of-birth">
+         <div class="tag-of-info">Date of birth</div> 
+        <div class="response-of-user">20-20-20</div></div>
+        <div class="well-sm user-info institute">
+         <div class="tag-of-info">Name of institute</div>
+        <div class="response-of-user">Manit</div> </div>
+        <div class="well-sm user-info email-id">
+         <div class="tag-of-info">Your email id</div>
+        <div class="response-of-user">divyanshvishwakarma@gmail.com</div> </div>
+        <div class="well-sm user-info contact-no">
+         <div class="tag-of-info">Your Contact number</div> 
+        <div class="response-of-user">74897567818</div></div>
+        <div class="tag-of-info">Your resume</div> 
+        <div class="response-of-user"><input type="file" name="file" id="file"></div></div>
+    </div>
     <div class="sidebar" >
         <div class="logo-details">
             <i id="dora" class='bx bx-leaf'></i>
@@ -172,7 +154,8 @@
 
 
         </script>
-        <script src="script.js"></script>
-</body>
 
+    </main>
+    
+</body>
 </html>

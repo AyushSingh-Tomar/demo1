@@ -3,65 +3,183 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayush-Magazine</title>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Schemes</title>
 </head>
 
 <body>
-
-
-
-    <!--------------------------------head bar---------------------------------->
-    <nav>
-        <div class="main-nav container flex">
-            <a href="#" class="Portal-logo" onClick="reload()">
-                <img src="https://i.ibb.co/FKMZgXk/Ayush-Magazine.png" alt="Ayush-Magazine">
-            </a>
-            <div class="nav-links">
-                <ul class="flex">
-                    <li class="hover-link nav-item" id="Start-ups" onclick="onNavItemClick('Start-ups')">Start-ups</li>
-                    <li class="hover-link nav-item" id="Market" onclick="onNavItemClick('Market')">Market</li>
-                    <li class="hover-link nav-item" id="Govt" onclick="onNavItemClick('Govt')">Govt</li>
-                    <li class="hover-link nav-item" id="Schemes" onclick="onNavItemClick('Schemes')">Schemes</li>
-                </ul>
-                <!-- on the place of id in function , we can pass a json object as well -->
-            </div>
-            <div class="search-bar flex">
-                <input type="text" class="news-input" placeholder="Search" id="search-text">
-                <button id="search-button" class="search-button">Search</button>
-            </div>
-
-        </div>
+    <nav id="navups" class="navbar-ups">
+        <div class="logo-startups"><h3>Govt-schemes</h3></div>
+        <ul class="navlinks-ups">
+            <li><a href="">New</a></li>
+            <li><a href="">Old</a></li>
+            <li><a href="">valuation</a></li>
+        </ul>
+        <a href="">register</a>
+        <i onclick="togglebtnups()" class='bx bx-menu'></i>
     </nav>
-    <!--Main content showing section-->
-    <main>
-        <div class="cards-container container flex" id="cards-container">
-        
 
-        </div>
-    </main>
-    <template id="template-news-card">
-        <div class="card">
-            <div class="card-header">
-                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
-            </div>
-            <div class="card-content">
-                <h3 id="news-title">Title</h3>
-                <h6 class="news-source" id="news-source">this is subtitle date 23/23/23</h6>
-                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
-                    tempore sapiente labore autem voluptatem laborum odio ducimus, nostrum cupiditate nemo culpa est
-                    iure nam saepe quia quod accusantium quibusdam soluta.</p>
-            </div>
-        </div>
-    </template> <!--make it anywhere doesnt matter-->
+    <div class="Start-ups-list-container">
+        <div class="sub-sartups-list">
+            <div class="left-col">
+                <h1>Recommended</h1>
+                <div class="Start-ups">
+                    <div class="Start-ups-img">
+                        <img src="https://via.placeholder.com/400x200" alt="">
+                    </div>
+                    <div class="Start-ups-info">
+                        <p>Lorem ipsum adipisicing elitabore. Totam incidunt ab mollitia </p>
+                        <h3>fhei fhd nkj dcni fhurfhgfu yc bj fbk fsk udgugd</h3>
+                        <p>rpfc2 09r 23u 4rn lifhb7yrb iehbi fnd7y be</p>
+                        <div class="visit-scheme">
+                            <p><a href="#">Visit</a></p>
+                        </div>
+                    </div>
 
-    <!-------------------------------sidebar------------------------------------>
-    <div class="sidebar" >
+                </div>
+                <div class="Start-ups">
+                    <div class="Start-ups-img">
+                        <img src="https://via.placeholder.com/400x200" alt="">
+                    </div>
+                    <div class="Start-ups-info">
+                        <p>Lorem ipsum adipisicing elitabore. Totam incidunt ab mollitia </p>
+                        <h3>fhei fhd nkj dcni fhurfhgfu yc bj fbk fsk udgugd</h3>
+                        <p>rpfc2 09r 23u 4rn lifhb7yrb iehbi fnd7y be</p>
+                        <div class="visit-scheme">
+                            <p><a href="#">Visit</a></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="Start-ups">
+                    <div class="Start-ups-img">
+                        <img src="https://via.placeholder.com/400x200" alt="">
+                    </div>
+                    <div class="Start-ups-info">
+                        <p>Lorem ipsum adipisicing elitabore. Totam incidunt ab mollitia </p>
+                        <h3>fhei fhd nkj dcni fhurfhgfu yc bj fbk fsk udgugd</h3>
+                        <p>rpfc2 09r 23u 4rn lifhb7yrb iehbi fnd7y be</p>
+                        <div class="visit-scheme">
+                            <p><a href="#">Visit</a></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="Start-ups">
+                    <div class="Start-ups-img">
+                        <img src="https://via.placeholder.com/400x200" alt="">
+                    </div>
+                    <div class="Start-ups-info">
+                        <p>Lorem ipsum adipisicing elitabore. Totam incidunt ab mollitia </p>
+                        <h3>fhei fhd nkj dcni fhurfhgfu yc bj fbk fsk udgugd</h3>
+                        <p>rpfc2 09r 23u 4rn lifhb7yrb iehbi fnd7y be</p>
+                        <div class="visit-scheme">
+                            <p><a href="#">Visit</a></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="Start-ups">
+                    <div class="Start-ups-img">
+                        <img src="https://via.placeholder.com/400x200" alt="">
+                    </div>
+                    <div class="Start-ups-info">
+                        <p>Lorem ipsum adipisicing elitabore. Totam incidunt ab mollitia </p>
+                        <h3>fhei fhd nkj dcni fhurfhgfu yc bj fbk fsk udgugd</h3>
+                        <p>rpfc2 09r 23u 4rn lifhb7yrb iehbi fnd7y be</p>
+                        <div class="visit-scheme">
+                            <p><a href="#">Visit</a></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="Start-ups">
+                    <div class="Start-ups-img">
+                        <img src="https://via.placeholder.com/400x200" alt="">
+                    </div>
+                    <div class="Start-ups-info">
+                        <p>Lorem ipsum adipisicing elitabore. Totam incidunt ab mollitia </p>
+                        <h3>fhei fhd nkj dcni fhurfhgfu yc bj fbk fsk udgugd</h3>
+                        <p>rpfc2 09r 23u 4rn lifhb7yrb iehbi fnd7y be</p>
+                        <div class="visit-scheme">
+                            <p><a href="#">Visit</a></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="Start-ups">
+                    <div class="Start-ups-img">
+                        <img src="https://via.placeholder.com/400x200" alt="">
+                    </div>
+                    <div class="Start-ups-info">
+                        <p>Lorem ipsum adipisicing elitabore. Totam incidunt ab mollitia </p>
+                        <h3>fhei fhd nkj dcni fhurfhgfu yc bj fbk fsk udgugd</h3>
+                        <p>rpfc2 09r 23u 4rn lifhb7yrb iehbi fnd7y be</p>
+                        <div class="visit-scheme">
+                            <p><a href="#">Visit</a></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="right-col">
+                <div class="sidebar-right-col">
+                    <h2>Select Specification</h2>
+                    <h3>Scheme type</h3>
+                    <div class="filter">
+                        <input type="checkbox">
+                        <p>Monetary</p><span>(0)</span>
+                    </div>
+                    <div class="filter">
+                        <input type="checkbox">
+                        <p>Tax-waiver</p><span>(0)</span>
+                    </div>
+                    <div class="filter">
+                        <input type="checkbox">
+                        <p>GST-moderation</p><span>(0)</span>
+                    </div>
+                    <div class="filter">
+                        <input type="checkbox">
+                        <p>Marketing</p><span>(0)</span>
+                    </div>
+                    <h3>Criteria</h3>
+                    <div class="filter">
+                        <input type="checkbox">
+                        <p>Small-scale</p><span>(0)</span>
+                    </div>
+                    <div class="filter">
+                        <input type="checkbox">
+                        <p>Large-scale</p><span>(0)</span>
+                    </div>
+                    <div class="filter">
+                        <input type="checkbox">
+                        <p>Running-startup</p><span>(0)</span>
+                    </div>
+                    <div class="filter">
+                        <input type="checkbox">
+                        <p>Startup under incubation</p><span>(0)</span>
+                    </div>
+                    <div class="sidebar-right-col-link">
+                        <a href=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var navups = document.getElementById("navups");
+        function togglebtnups() {
+            navups.classList.toggle("hidemenups");
+        }
+    </script>
+     <div class="sidebar" >
         <div class="logo-details">
             <i id="dora" class='bx bx-leaf'></i>
             <div class="logo_name">Ayush-Portal</div>
@@ -172,7 +290,6 @@
 
 
         </script>
-        <script src="script.js"></script>
 </body>
 
 </html>

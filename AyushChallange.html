@@ -1,66 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayush-Magazine</title>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    <title>Challenge</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-
-
-    <!--------------------------------head bar---------------------------------->
-    <nav>
-        <div class="main-nav container flex">
-            <a href="#" class="Portal-logo" onClick="reload()">
-                <img src="https://i.ibb.co/FKMZgXk/Ayush-Magazine.png" alt="Ayush-Magazine">
-            </a>
-            <div class="nav-links">
-                <ul class="flex">
-                    <li class="hover-link nav-item" id="Start-ups" onclick="onNavItemClick('Start-ups')">Start-ups</li>
-                    <li class="hover-link nav-item" id="Market" onclick="onNavItemClick('Market')">Market</li>
-                    <li class="hover-link nav-item" id="Govt" onclick="onNavItemClick('Govt')">Govt</li>
-                    <li class="hover-link nav-item" id="Schemes" onclick="onNavItemClick('Schemes')">Schemes</li>
-                </ul>
-                <!-- on the place of id in function , we can pass a json object as well -->
-            </div>
-            <div class="search-bar flex">
-                <input type="text" class="news-input" placeholder="Search" id="search-text">
-                <button id="search-button" class="search-button">Search</button>
-            </div>
-
-        </div>
-    </nav>
-    <!--Main content showing section-->
-    <main>
-        <div class="cards-container container flex" id="cards-container">
+    <div class="heading-of-challenge">
+        <h1> What is Ayush Challenge </h1>
+    </div>
+    <div class="Details-of-challenge">
+      <p>Ayush Startup Challenge
+        <br>
+        The All India Institute of Ayurveda (AIIA) has been conceived as an Apex Institute for Ayurveda. It is an Autonomous Institute under Ministry of Ayush. It aims at bringing a synergy between the traditional wisdom of Ayurveda and the modern tools and technology. The Institute has 25 specialty departments and 12 clinics with 8 inter-disciplinary research laboratories wherein several scholars have access for PG & Ph.D. programs every year. This institute also has an international collaborative centre for global promotion and research in Ayurveda.
         
-
-        </div>
-    </main>
-    <template id="template-news-card">
-        <div class="card">
-            <div class="card-header">
-                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
-            </div>
-            <div class="card-content">
-                <h3 id="news-title">Title</h3>
-                <h6 class="news-source" id="news-source">this is subtitle date 23/23/23</h6>
-                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
-                    tempore sapiente labore autem voluptatem laborum odio ducimus, nostrum cupiditate nemo culpa est
-                    iure nam saepe quia quod accusantium quibusdam soluta.</p>
-            </div>
-        </div>
-    </template> <!--make it anywhere doesnt matter-->
-
-    <!-------------------------------sidebar------------------------------------>
+        
+        
+        All India Institute of Ayurveda (AIIA) through the partnership with Startup India wants to identify and support innovations and startups working in the Ayush sectors and harness the power of new technologies.
+    </p>
+<br>
+        <h3>Program Details</h3>
+        <br>
+       <p>DETAILED ELIGIBILITY CRITERIA</p> 
+        <p>The Ayush Startup Challenge is open to the following -</p>
+        <br>
+        1. Early Stage Startups
+        <br>
+        2. Individuals as a group (3-5 members)- (If selected, they will be required to register a legal entity before any cash prize/grant can be rewarded to them)
+    </div>
+    <div class="image-of-challenge">
+        <img src="Screenshot_20230920_093803.png" alt="">
+    </div>
+    <div class="link-of-govt-website">
+        <a href="https://www.startupindia.gov.in/content/sih/en/ams-application/challenge.html?applicationId=61f90367e4b00f5d174a31c8&fbclid=IwAR23Ngtdx6PVVfou-f3w_Z-tZWNvHZaMv2fx0RNlXKj18YfsbkYYFCccqwI#:~:text=It%20aims%20at%20bringing%20a,programs%20every%20year."></a>
+    </div>
     <div class="sidebar" >
         <div class="logo-details">
             <i id="dora" class='bx bx-leaf'></i>
@@ -172,7 +149,5 @@
 
 
         </script>
-        <script src="script.js"></script>
 </body>
-
 </html>

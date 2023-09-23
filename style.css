@@ -8,39 +8,71 @@
 
 }
 
-:root                                       /*  global-variables */
-{
-           --primary-text-color : #183b56;
-           --secondary-text-color : #577592;
-           --accent-color : #2294ed;
-           --accent-color-dark : #1369a3;
-         
+
+
+:root
+
+/* --------------------------- global-variables -------------------------------------------------------*/
+    {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1369a3;
+
+}
+
+/*----------------------------------------body --------------------------------------------------------------------*/
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-text-color);
+}
+
+/*----------------------------------------Paragraph-------------------------------------*/
+p {
+    font-family: sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
 }
 
 
-#center-leaf-logo
-{
+#center-leaf-logo {
     color: green;
     font-size: 40px;
     font-weight: 600;
     display: inline;
 
-    
+
 }
-#dora
-{
+
+#dora {
     color: green;
-    
+
 }
-#center-webname
-{
+
+#center-webname {
     color: rgb(0, 0, 0);
     display: inline;
     font-weight: 500;
     font-size: 10px;
-    
+   
+
 }
-/*  _________________________________________________________________--Side bar detailing */
+.heading-of-homepage
+{
+  margin-top: 200px;
+}
+
+
+
+/*  --------------------------------------------------Side bar detailing ------------------------------------------------------------------------*/
 .sidebar {
     position: fixed;
     left: 0;
@@ -48,7 +80,7 @@
     height: 100%;
     width: 78px;
     background: #11101D;
-     
+
     padding: 6px 14px;
     z-index: 99;
     transition: all 0.5s ease;
@@ -163,7 +195,7 @@
     border-radius: 12px;
     transition: all 0.5s ease;
     background: #1d1b31;
-     
+
 }
 
 .sidebar.open input {
@@ -178,20 +210,20 @@
     transform: translateY(-50%);
     font-size: 22px;
     background: #1d1b31;
-     
+
     color: #FFF;
 }
 
 .sidebar.open .bx-search:hover {
     background: #1d1b31;
-     
+
     color: #FFF;
 }
 
 .sidebar .bx-search:hover {
     background: #FFF;
     color: #11101d;
-     
+
 }
 
 .sidebar li a {
@@ -203,7 +235,7 @@
     text-decoration: none;
     transition: all 0.4s ease;
     background: #11101D;
-     
+
 }
 
 .sidebar li a:hover {
@@ -225,11 +257,13 @@
     pointer-events: auto;
 }
 
+
+
 .sidebar li a:hover .links_name,
 .sidebar li a:hover i {
     transition: all 0.5s ease;
     color: #11101D;
-     
+
 }
 
 .sidebar li i {
@@ -247,7 +281,7 @@
     bottom: -8px;
     padding: 10px 14px;
     background: #1d1b31;
-     
+
     transition: all 0.5s ease;
     overflow: hidden;
 }
@@ -276,6 +310,7 @@
     font-weight: 400;
     color: #fff;
     white-space: nowrap;
+
 }
 
 .sidebar li.profile .job {
@@ -320,8 +355,8 @@
 
 .home-section .text {
     display: inline-block;
-    color: #101d14;              
-                 
+    color: #101d14;
+
     font-size: 25px;
     font-weight: 500;
     margin: 18px
@@ -332,203 +367,930 @@
         display: none;
     }
 }
+
 @media (max-width: 54px) {
     .center-heading center i {
         display: block;
     }
-    .center-heading #center-webname h1  {
+
+    .center-heading #center-webname h1 {
         display: block;
     }
 }
 
+.profile-details a {
+    width: 30% !important;
+}
+
 /* _________________________________________________________________________________--Splash Screen  */
 .splash {
+    margin-top: 0px;
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    float: left;
+    width: 100%;
+    height: 100%;
     background-color: #11101d;
     display: flex;
     align-items: center;
     justify-content: center;
     animation: fadeInfor 1s linear forwards;
     animation-delay: 1s;
-    z-index: 100;
+    z-index: 200;
 
 }
 
-.splash .logd h1 i
-{
-  color: green;
+.splash .logd h1 i {
+    color: green;
 }
-.logom p
-{
-  color: rgb(255, 255, 255);
-  font-size: 40px;
+
+.logom p {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    /*may be problematic*/
 }
 
 @keyframes fadeInfor {
     0% {
-        z-index: 100;
+        z-index: 200;
         opacity: 1;
     }
 
     100% {
+        display: none;
         z-index: 0;
         opacity: 0;
     }
 }
 
- #Magazine
-{
- color: var(--primary-text-color);
-}
 
-#Magazine  p{
-    color: var(--secondary-text-color);
-    line-height: 1.4rem;
-}
+/*----------------------------------------------------------- Styling for magazine --------------------------------------------------------------*/
 
+/*--------------------utility classes to be used for Ayush-Magazine --------------------*/
 
-.Magazine-nav-links li a 
-{
-    text-decoration: none;
-}
-.Magazine-nav-links ul
-{
-    list-style: none;
-}
-
-.flex-Magazine /*utility class*/
-{
+.flex {
     display: flex;
     align-items: center;
-
 }
 
-.container-Magazine  /*utility class*/
-{
-    max-width: 1180px;
+.container {
+    max-width: 70%;
     margin-inline: auto;
+    /*so that it is evenly spaced from both the sides---*/
     overflow: hidden;
 }
 
-#Magazine nav-bar
-{
+nav {
     background-color: #f3faff;
     box-shadow: 0 0 4px #bbd0e2;
     position: fixed;
     top: 0;
-    z-index: 9;
+    z-index: 99;
     left: 0;
     right: 0;
 }
 
-.Magazine-main-nav
-{
-  justify-content: space-between;
-  padding: 8px 0px;
+.main-nav {
+    justify-content: space-between;
+    padding: 8px 0 0;
+    /*may be problematic*/
 }
 
-.Magazine-logo img{
- width: 200px;
-
-}
-
-.Magazine-nav-links ul
+/* .Portal-logo img 
 {
-  gap: 16px;
-}
+    width
+} */
 
-Magazine-nav-item :active
-{
- color: var(--accent-color);
+.nav-links ul {
+    gap: 16px;
+    /*may be problematic*/
 }
 
-.Magazine-hover-link
-{
-cursor: pointer;
-}
-.Magazine-hover-link :hover
-{
- color: var(--secondary-text-color);
-}
-.Magazine-hover-link :active
-{
- color: red;
+.hover-link {
+    cursor: pointer;
 }
 
-.Magazine-search-bar
-{
+.hover-link:hover {
+    color: var(--secondary-text-color);
+}
+
+.hover-link:active {
+    color: red;
+}
+
+.nav-item.active {
+    color: var(--accent-color);
+}
+
+.search-bar {
     height: 32px;
-    gap: 8px;
+    /*may be problematic*/
+    gap: 4px;
+    /*may be problematic*/
 }
-.input-search
-{
-    width: 200px;
+
+.news-input {
+    border: 2px solid #bbd0e2;
+    width: 76%;
     height: 100%;
     padding-inline: 12px;
-    border: 2px solid #11101D;
+    /*may be problematic*/
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.search-button {
+    background-color: #11101d;
+    color: #f3faff;
+    height: 100%;
+    width: 30%;
+    border: 2px solid #11101d;
     border-radius: 4px;
+    box-shadow: 0 0 4px #252f38;
+    margin-right: 4px;
+    cursor: pointer;
+    transition: .2s;
+    font-family: "Poppins", sans-serif;
+
+
 }
 
-.search-button{
-background-color: var(--accent-color);
-color: white;
-padding: 8px 24px;
-border: none;
-border-radius: 4px;
-cursor: pointer;
-transition: .2s;
-}
-.Magazine-search-bar .search-button:hover{
-background-color: var(--accent-color-dark);
-transform: scale(0.9);
+.search-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px #252f38;
+    color: #6f8b9f;
 }
 
-/* form elements dont take font family of body i have to put it {Bharat-bhaiya}need to  */
-
-#Magazine main        
-{
+main {
     padding-block: 20px;
-    margin-top: 80px;
+    margin-top: 120px;
+    /*maybe problematic */
 }
 
-.card-container
-{
- justify-content: space-between;
- flex-wrap: wrap;
- row-gap: 20px;
- align-items: start;
-
-
+.cards-container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 2.5%;
+    align-items: start;
 }
 
-.card
-{
-  width: 360px;
-  min-height: 4px;
-  box-shadow: 0 0 #d4ecff;
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: #fff;
-  overflow: hidden;
-  transition: all .3s ease;
-}
-.card:hover
-{
-  
-  box-shadow: 1px 1px 8px #d4ecff;
-  background-color: #f9fdff;
-  transform: translateY(-2px);
- 
-}
-.card-header img
-{
-width: 100%;
-height: 180px;
+.card {
+    width: 360px;
+    /*  may be problematic */
+    min-height: 400px;
+    /*may be problematic*/
+    box-shadow: 0px 0px 4px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .3s ease;
 }
 
-.card-content
-{
+.card:hover {
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #f9fdff;
+    transform: translateY(-2px);
+}
+
+.card-header img {
+    width: 100%;
+    height: 180px;
+    /* may be problematic */
+    object-fit: cover;
+}
+
+.card-content {
     padding: 12px;
+
+}
+
+.news-source {
+    margin: 12px;
+
+}
+
+
+
+@media (max-width: 1542px) {
+    .card {
+        width: 40%;
+
+    }
+}
+
+@media (max-width: 393px) {
+    .Portal-logo {
+        width: 60%;
+
+    }
+}
+
+@media (max-width: 1542px) {
+    .card {
+        width: 40%;
+
+
+    }
+
+    .cards-container {
+        row-gap: 2%;
+    }
+
+}
+
+@media (max-width: 1027px) {
+    .card {
+        width: 100%;
+        margin: auto auto auto 20%;
+    }
+
+}
+
+/*----------------------------------------------------------- Styling for profile pages for student and mentor --------------------------------------------------------------*/
+
+.header-background-profile {
+
+    height: 25vh;
+    width: 100%;
+    background-color: #11101d;
+    align-items: center;
+}
+
+.student-mentor-image {
+    margin: auto;
+    z-index: 1;
+    min-height: 100%;
+    width: 200px;
+    /* margin-top: 20px; */
+
+
+}
+
+.student-mentor-image img {
+    border: white 12px solid;
+    box-shadow: 0 0 16px #11101d;
+}
+
+.profile-details
+
+/* access through side bar */
+    {
+    width: 20px;
+
+}
+
+/* .name_job
+{
+    margin-left: 150%;
+} */
+
+.profile-details {
+    width: 80%;
+    margin: auto;
+    border: 2px solid black;
+
+}
+
+.user-info {}
+
+/* .tag-of-info, .response-of-user
+{
+   
+  
+} */
+
+.tag-of-info {
+    width: 50%;
+}
+
+/* ------------------------------------------------------UPD STU PROFILE---------------------------------------------- */
+
+.profile-page {
+    width: 65%;
+    margin-left: 1px;
+    margin: auto;
+
+}
+
+.leftside-division,
+.upper-division,
+.rightside-division,
+.lower-division {
+    border: #11101d solid 2px;
+}
+
+.rightside-division {
+    float: right;
+    width: 15%;
+    background-color: #11101D;
+    z-index: 1;
+}
+
+.leftside-division {
+    float: left;
+
+    width: 65%;
+    padding: 4px;
+    background-color: #bbd0e2;
+
+
+}
+
+.upper-division {
+    margin: 4px 4px 4px 4px !important;
+    /* height: 48%; */
+    width: 98%;
+    margin: auto;
+    background-color: #6f8b9f;
+}
+
+.lower-division {
+    margin: 4px 4px 4px 4px !important;
+    /* height: 48%; */
+    width: 98%;
+    margin: auto;
+    background-color: #6f8b9f;
+}
+
+
+.profile-page-picture img {
+    position: absolute;
+    float: left;
+    border: white 12px solid;
+    box-shadow: 0 0 16px #11101d;
+
+
+}
+
+.profile-page-picture {
+    position: absolute;
+    float: left;
+    margin: auto;
+    z-index: 1;
+    min-height: 100%;
+    width: 200px;
+    margin-top: 20px;
+
+
+}
+
+/* ================================================================= mentor section */
+
+#html-of-mentor-section,
+#body-of-mentor-section {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: #6497ED;
+
+}
+
+
+
+.mentor-container .box-of-mentor {
+
+    width: calc(33% - 10px);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+}
+
+.box-of-mentor .image-of-mentor {
+
+    margin: 10px 0;
+    height: 150px;
+    width: 150px;
+    background: #6497ED;
+    padding: 3px;
+    border-radius: 50%;
+
+}
+
+.box-of-mentor .image-of-mentor img {
+
+
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+
+}
+
+.box-of-mentor .name {
+    margin: 10px 0 3px 0;
+    color: #6497ED;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.box-of-mentor .rating i {
+    font-size: 18px;
+    color: #6497ED;
+    margin-bottom: 5px;
+
+}
+
+.box-of-mentor .image-of-mentor {
+
+    margin: 10px 0;
+    height: 150px;
+    width: 150px;
+    background: #6497ED;
+    padding: 3px;
+    border-radius: 50%;
+
+}
+
+.box-of-mentor .image-of-mentor img {
+
+
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+
+}
+
+.mentor-container {
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+.box-of-mentor p {
+    text-align: justify;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.btns {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.btns button {
+
+    width: 100%;
+    background: #6497ED;
+    padding: 9px 0px;
+    outline: none;
+    border: 2px solid #6497ED;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    color: #6497ED;
+    transition: all 0.3s linear;
+}
+
+.btns button:first-child {
+    background: none;
+    margin-right: 5px;
+}
+
+.btns button:last-child {
+    color: #fff;
+    margin-left: 5px;
+}
+
+.btns button:first-child:hover {
+    background: #6497ED;
+    color: #fff;
+}
+
+@media (max-width: 1045px) {
+    .mentor-container .box-of-mentor {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 710px) {
+    .mentor-container .box-of-mentor {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 1232px) {
+    .mentor-container {
+        margin-left: 15%;
+    }
+
+}
+
+@media (max-width: 440px) {
+    .mentor-container {
+        margin-left: 20%;
+    }
+
+}
+
+/*------------------------------------------------startups listing*/
+.Start-ups-list-container
+{
+    padding: 0 7%;
+    margin-top: 150px;
+
+}
+.sub-sartups-list
+{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+.Start-ups
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-top:1px solid #ccc;
+}
+.Start-ups-img
+{
+  flex-basis: 40%;
+}
+.Start-ups-img img
+{
+  width: 100%;
+  border-radius: 12px;
+}
+.Start-ups-info
+{
+  flex-basis: 58%;
+  color: #555;
+}
+.Start-ups-info h3
+{
+ font-weight: 600;
+ color: #333;
+ font-size: 22px;
+ margin: 4px 0;
+}
+.visit-scheme
+{
+    
+    border-radius: 4px;
+    width: 40px;
+    align-items: center;
+    padding: 2px;
+    background-color: var(--accent-color);
+   
+}
+.visit-scheme a
+{
+ color: #fff;
+}
+.left-col
+{
+       flex-basis: 70%;
+}
+.right-col
+{
+       flex-basis: 25%;
+}
+
+.left-col h1{
+    color: #333;
+    font-weight: 600;
+    margin-bottom:20px ;
+}
+.navbar-ups {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+}
+
+.logo-startups {
+    cursor: pointer;
+}
+
+.navlinks-ups li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px 30px;
+}
+
+.navlinks-ups li a {
+    color: var(--accent-color);
+}
+
+
+.navbar-ups #dontshow {
+    display: none;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .logo-startups {
+        position: fixed;
+        top: 4%;
+        left: 7%;
+
+    }
+
+    .navbar-ups {
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        display: inline-block;
+        width: 100%;
+        padding: 100px 7% 0;
+        background: #000;
+        text-align: right;
+        max-height: 100px;
+        overflow: hidden;
+        transition: max-height 0.5s;
+
+    }
+
+    .navbar-ups .navlinks-ups li {
+        margin: 10px 0;
+        display: block;
+    }
+
+    .navbar-ups #dontshow {
+        display: block;
+        position: fixed;
+        top: 4%;
+        right: 7%;
+        color: #fff;
+        font-size: 28px;
+    }
+    .hidemenups
+    {
+        max-height: 300px;
+    }
+
+}
+/* --------------------------------///filter page styling */
+.sidebar-right-col
+{
+    border: 1px solid #999;
+    margin-top:30px ;
+
+}
+.sidebar-right-col h2
+{
+  font-weight: 500;
+  padding: 8px;
+
+}
+.sidebar-right-col h3
+{
+  font-weight: 500;
+  margin: 20px 0 10px;
+  padding: 8px;
+
+}
+
+.filter
+{
+   display: flex;
+   align-items: center;
+   color: #555;
+   margin-bottom: 10px;
+   padding: 8px;
+}
+.filter p
+{
+  flex: 1;
+}
+.filter input
+{
+  margin-right: 15px;
+  cursor: pointer;
+
+}
+/* ------------------------------------media queries for smaller screen for listing pages */
+
+@media only screen and (max-width: 700px)  {
+    .sub-sartups-list
+    {
+        margin-top: 150px;
+    }
+    .left-col,.right-col,.Start-ups-info,.Start-ups-img
+    {
+     flex-basis: 100%;
+    }
+    .left-col h1
+    {
+        font-size: 22px;
+    }
+    
+
+ .Start-ups-info h3
+    {
+        font-size: 18px;
+    }
+    
+}
+/* /------------------------------------ Final changes ---------------------- */
+#changed-ul-for-main-sidebar ul
+{
+   padding-left: 0rem;
+}
+
+#carouselExampleIndicators
+{
+
+
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    width: 50%;
+    margin: auto;
+    margin-top: 80px;
+    float: right;
+   
+
+}
+#testingimage
+{
+   
+    margin-left: 25px;
+    display: inline-block;
+    
+}
+#greetings
+{
+    padding: 120px;
+    padding-bottom: 0;
+    font-weight: 600;
+    font-size: 40px;
+}
+/* /------------------------------------login page------------------/ */
+#login-body
+{
+    background: #11101D;
+   
+}
+
+.loginbox
+{
+    background: #fff;
+    padding: 30px 120px;
+    width: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-radius: 10px;
+}
+.loginbox h2
+{
+    margin-bottom: 30px;
+}
+.loginbox button img
+{
+   width: 18px;
+   margin-right: 10px;
+}
+.loginbox button 
+{
+   width: 100%;
+   padding: 10px 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 20px 0;
+   border-radius: 30px;
+   background: transparent;
+   border: 1px solid #999;
+   cursor:pointer;
+   font-weight: 500;
+
+}
+.loginbox hr{
+    border: 0;
+    height: 1px;
+    background: #c2c2c2;
+    margin:5px ;
+    
+}
+.loginbox span{
+    display: block;
+    width: 40px;
+    margin: auto;
+    background: #fff;
+    font-size: 14px;
+   margin-top: -16px;
+   
+}
+.loginbox input{
+width: 100%;
+background: transparent;
+border: 1px solid #999;
+outline: 0;
+padding: 15px 10px;
+border-radius: 4px;
+margin: 10px;
+
+}
+::placeholder
+{
+    font-weight: 500;
+    color: #333;
+    
+}
+.loginbox form button
+{
+background: #000;
+color: #fff;
+border: 0;
+margin-bottom:15px ;
+}
+
+.loginbox p
+{
+text-align: left;
+font-size: 14px;
+color: #555;
+margin: 40px 0 50px;
+}
+.loginbox p a
+{
+text-decoration: none;
+color: #359cf0;
+}
+
+
+@media only screen and (max-width: 700px) {
+ .loginbox
+ {
+    width: 80%;
+ }
+
+}
+
+@media only screen and (max-width: 565px) {
+ .loginbox
+ {
+    width: 80%;
+ }
+ .loginbox span{
+   
+    font-size: 10px;
+  
+   
+}
+}
+@media only screen and (max-width: 556px) {
+ .loginbox
+ {
+    width: 80%;
+ }
+ .loginbox span{
+   
+    font-size: 5px;
+  
+   
+}
+}
+
+#always
+{
+    display: block;
+}
+
+/* this is code  for challenge */
+
+.heading-of-challenge h1
+{
+   font-weight: 600;
+ padding-left: 40%;
+}
+
+.Details-of-challenge 
+{
+   font-weight: 300;
+ padding-left: 6%;
+}
+
+.image-of-challenge
+{
+    padding-left: 6%;
 }
